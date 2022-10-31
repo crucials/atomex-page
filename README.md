@@ -5,3 +5,5 @@ Responsive webpage with interesting features like table sorting. Built with Webp
 [View the page :eyes:](https://crucials.github.io/atomex-page)
 
 [View the figma mockup :bookmark_tabs:](https://www.figma.com/file/B3i8hSnfO1YfOvc3tuPAR9/Atomex)
+
+![Web page showcase](https://github.com/crucials/atomex-page/blob/master/preview.png)
