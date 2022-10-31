@@ -1,0 +1,146 @@
+@use '../colors';
+
+.news {
+    padding-top: 54px;
+}
+
+.news__latest-news {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news__view-more-button-tablet {
+    display: none;
+}
+
+
+// News post
+.post {
+    width: 32.3%;
+    background-color: white;
+    border-radius: 7px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        cursor: default;
+        box-shadow: 0 10px 30px 0px rgb(33, 37, 41, 0.12);
+    }
+}
+
+.post-thumbnail {
+    width: 100%;
+    height: 190px;
+}
+
+.post-body {
+    padding: 20px;
+}
+
+.post-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.tag {
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: colors.$darkTextColor;
+    border-radius: 23px;
+    font-size: 0.87rem;
+    padding: 6px 13px;
+    border: solid 1px colors.$darkTextColor;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.post-heading {
+    font-family: 'Nunito';
+    font-weight: normal;
+    color: colors.$darkTextColor;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.post-description {
+    font-family: 'Nunito';
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #63696f;
+    margin-bottom: 20px;
+}
+
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-date {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 0.87rem;
+    color: colors.$darkTextColor;
+}
+
+.calendar-icon {
+    width: 1rem;
+    height: 1.125rem;
+}
+
+.post-read-more-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 1rem;
+    color: colors.$mainColor;
+}
+
+@media (min-width: 1800px) {
+    .post-heading {
+        font-size: 1.4rem;
+    }
+
+    .post-description {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .news__latest-news {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .post {
+        width: 45%;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 460px) {
+    .news__wrapper {
+        justify-content: center;
+    }
+
+    .news__view-more-button-desktop {
+        display: none;
+    }
+
+    .news__view-more-button-tablet {
+        display: block;
+    }
+}

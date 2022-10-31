@@ -1,0 +1,22 @@
+@use 'styles/normalize';
+
+@use 'styles/header';
+@use 'styles/sections/service';
+@use 'styles/sections/popularamounts';
+@use 'styles/sections/market';
+@use 'styles/sections/popularpairs';
+@use 'styles/sections/hybridexchange';
+@use 'styles/sections/faq';
+@use 'styles/sections/partners';
+@use 'styles/sections/news';
+@use 'styles/footer';
+
+@use 'styles/colors';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+.adaptive-image {
+    width: 100%;
+    height: 100%;
+}

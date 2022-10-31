@@ -1,0 +1,137 @@
+@use '../colors';
+
+.statistics-section {
+    padding-bottom: 110px;
+    background-color: white;
+}
+
+.section-content-wrapper {
+    width: 58.3%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.section-heading {
+    font-family: 'Nunito';
+    font-weight: normal;
+    font-size: 2rem;
+    color: colors.$darkTextColor;
+}
+
+@media (max-width: 1289px) {
+    .section-content-wrapper {
+        width: 96%;
+    }
+}
+
+
+.service {
+    padding: 110px 0;
+}
+
+.service__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service__features {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.service-feature {
+    width: 18.8%;
+    padding: 20px;
+    transition: box-shadow 0.4s;
+    min-width: 300px;
+
+    &:hover {
+        box-shadow: 0px 10px 30px 0px rgba(33, 37, 41, 0.12);
+    }
+}
+
+.service-feature-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 18px;
+    margin-bottom: 6px;
+}
+
+.service-feature-icon {
+    width: 91px;
+    height: 91px;
+}
+
+.service-feature-heading {
+    font-family: 'Nunito';
+    font-weight: normal;
+    color: colors.$darkTextColor;
+    font-size: 1.5rem;
+}
+
+.service-feature-body {
+    width: 88%;
+}
+
+.service-feature-description {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #63696f;
+    margin-bottom: 15px;
+}
+
+.view-more-link {
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: #0056b3;
+
+    &:hover {
+        color: #004188;
+    }
+}
+
+.right-arrow-icon {
+    width: 14px;
+    height: 8px;
+    vertical-align: baseline;
+}
+
+@media (min-width: 1800px) {
+    .service-feature-description, .view-more-link {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-feature {
+        width: 94%;
+        display: flex;
+        justify-content: space-around;
+        column-gap: 15px;
+        align-items: flex-start;
+        min-width: 300px;
+    }
+
+    .service-feature-header {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 530px) {
+    .service-feature {
+        display: block;
+    }
+
+    .service-feature-header {
+        align-items: center;
+    }
+}

@@ -1,0 +1,115 @@
+@use 'colors';
+
+.footer {
+    background-color: colors.$mainColor;
+    padding: 35px 0 45px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+}
+
+.footer-section-heading {
+    font-family: 'Nunito';
+    font-weight: normal;
+    color: white;
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+
+// About section
+.footer__about {
+    font-family: 'Nunito';
+    font-weight: normal;
+    width: 22%;
+}
+
+.footer__about-text {
+    color: #cbcbcb;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 70px;
+}
+
+.footer__copyright {
+    color: white;
+}
+
+.footer__copyright-tablet {
+    font-family: 'Nunito';
+    font-weight: normal;
+    font-size: 0.87rem;
+    margin-top: 40px;
+    display: none;
+}
+
+
+// Contact section
+.footer__contact {
+    font-family: 'Nunito';
+    font-weight: normal;
+    width: 9%;
+}
+
+.footer__mail {
+    display: block;
+    color: #cfcfcf;
+    margin-bottom: 27px;
+}
+
+
+// Follow us section
+.footer__follow-us {
+    width: 13%;
+}
+
+.footer__social-networks {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-network {
+    width: 20px;
+    height: 13px;
+}
+
+
+@media (min-width: 1800px) {
+    .footer-section-heading {
+        font-size: 1.55rem;
+    }
+
+    .footer__about-text, .footer__copyright, .footer__mail {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 756px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        
+        & > section {
+            width: 95%;
+        }
+    }
+
+    .footer__copyright {
+        width: 95%;
+    }
+
+    .footer__copyright-desktop {
+        display: none;
+    }
+
+    .footer__copyright-tablet {
+        display: block;
+    }
+
+    .footer__about-text {
+        margin-bottom: 0px;
+    }
+}

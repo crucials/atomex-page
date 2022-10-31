@@ -1,0 +1,128 @@
+@use '../colors';
+
+.view-more-button {
+    padding: 14px 0;
+    width: 265px;
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-weight: bold;
+    background-color: colors.$secondaryColor;
+    color: white;
+    font-size: 1rem;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken(colors.$secondaryColor, 4.5);
+
+        .right-arrow-2 {
+            animation-name: pointing;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes pointing {
+            20% {
+                transform: translateX(5px);
+            }
+
+            60% {
+                transform: translateX(0px);
+            }
+        }
+    }
+}
+
+.right-arrow-2 {
+    width: 14px;
+    height: 8px;
+    vertical-align: baseline;
+}
+
+.popular-amounts__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: 0px 10px 30px 0px rgba(34, 60, 80, 0.12);
+    }
+}
+
+.amount-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.amount-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.amount-title {
+    font-family: 'Nunito';
+    font-weight: normal;
+    font-size: 1rem;
+    color: colors.$darkTextColor;
+}
+
+.amount-code {
+    text-decoration: none;
+}
+
+.popular-amounts__view-more-button-tablet {
+    display: none;
+}
+
+@media (hover: none) {
+    .right-arrow-2 {
+        animation-name: pointing;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@media (min-width: 1800px) {
+    .amount-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .popular-amounts__view-more-button-desktop {
+        display: none;
+    }
+
+    .popular-amounts__view-more-button-tablet {
+        display: block;
+    }
+
+    .popular-amounts__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .popular-amounts__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .popular-amounts__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
