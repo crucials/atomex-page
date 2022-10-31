@@ -1,6 +1,6 @@
 # Atomex landing page
 
-Responsive webpage with interesting features like table sorting. Built with Webpack :gift: using Typescript, SASS and [sortable](https://github.com/tofsjonas/sortable) library
+Responsive webpage with interesting features like table sorting. Built with Webpack :gift: using Typescript, SASS and [sortable](https://github.com/tofsjonas/sortable) library.
 
 [View the page :eyes:](https://crucials.github.io/atomex-page)
 
